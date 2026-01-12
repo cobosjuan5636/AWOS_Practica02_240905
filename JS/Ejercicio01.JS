@@ -1,48 +1,53 @@
-//comentario de una sola linea 
+// --- Comentario de una sola línea ---
 
-/* comentario
----
-multilinea 
+/* Comentario
+   multilínea 
 */
 
-//ejercicio 01: Declaracion  de variables en javascript
+// Ejercicio 01: Declaración de variables en JavaScript
 
-//1. utilizando la palabra reservada var
+// 1. Utilizando la palabra reservada VAR
+console.warn("-- Declaración de variables utilizando el prefijo VAR --");
+var miNombre = "Juan";
+console.warn("El valor almacenado de la variable miNombre es:", miNombre);
 
-console.warn("--Declaracion de variables utilizando el prefigo VAR --")
-var miNombre = "juan"
-console.warn("El valor almacenado de la variable miNombre es :" ,miNombre)
+// Modificar el valor de la variable
+miNombre = "Juan Carlos"; 
+console.warn("El valor modificado de miNombre es:", miNombre);
 
-//modificar el nombre de la variable
+var misApellidos; 
+console.warn("El valor almacenado de la variable misApellidos es:", misApellidos); 
 
-var miNombre = "juan carlos"
-console.warn("El valor almacenado de la variable miNombre es :" ,miNombre)
+misApellidos = "Cobos Vega";
+console.warn("Después de asignar, misApellidos es:", misApellidos);
 
-var misApellidos;
-console.warn("El valor almacenado de la variable misApellido es :" ,misApellido)
 
-//una variable puede cambiar su valor durante su ejecusion del programa
+// 2. Utilizando la palabra reservada CONST
+console.warn("-- Declaración de variables utilizando el prefijo CONST --");
+// Una constante no cambia su valor durante la ejecución.
+const miMatricula = "240905"; 
+console.warn("El valor de la constante miMatricula es:", miMatricula);
 
-console.warn("--Declaracion de variables utilizando el prefigo CONST --")
-//2. utilizando la palbra reservada const
-//una constante  a  diferencia de una variable es que el valor no cambia durante toda la ejecucion del rograma y al momento de ser declarada 
+// Nota: Si intentas hacer miMatricula = "240000", JavaScript dará error.
 
-var miMatricula = "240905"
-console.warn("El valor de la constante  miMatricula es :" ,miMatricula)
 
-//inetentando modificar el valor de la constante 
+// 3. Utilizando la palabra reservada LET
+console.warn("-- Declaración de variables utilizando el prefijo LET --");
 
-//miMatricula = "240000"
+// Creamos un objeto de fecha (Año, Mes - 1, Día) o mediante string ISO
+var fechaNacimiento = new Date("2006-11-03"); 
 
-//3. utilizando la palabra reservada LET
-//LET es el prefigo utilizado muy similar a VAR  con la diferencia en su almacenamiento 
-var fechaNacimiento = new Date("03-11-2006") 
-
-function calcularEdad(fechaNacimiento)
-{
-
-    var fechaHoy = Date();
-    let milliSegundosPorDia = 24*60*60*1000;
-    let diasVividos = (hoy - fechaNacimiento)/milliSegundosPorDia
+function calcularEdad(fechaNacimiento) {
+    let fechaHoy = new Date(); // Obtenemos la fecha actual
+    let milliSegundosPorDia = 24 * 60 * 60 * 1000; // Milisegundos en un día
+    
+    // Calculamos la diferencia de tiempo en milisegundos y convertimos a días
+    let diasVividos = (fechaHoy.getTime() - fechaNacimiento.getTime()) / milliSegundosPorDia;
+    
+    console.log("Días vividos desde el nacimiento:", Math.floor(diasVividos));
 }
-// autor : Juan Carlos Cobos Vega 240905
+
+// Llamamos a la función
+calcularEdad(fechaNacimiento);
+
+// Autor: Juan Carlos Cobos Vega 240905
