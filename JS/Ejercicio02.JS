@@ -100,8 +100,8 @@ console.log(`Los tipos de datos de las variables declaradas para los datos de la
 //4.- STRING (Cadena de Caractéres)
 
 var fullnameOwner = "Juan Carlos Cobos Vega";
-let nameProperty = "   un puente de cristal en zacatlan   ";
-let descriptionProperty = "CASA de 1 pisos, 2 HABITACIONES, 1 baños completos y estacionamiento compartido";
+let nameProperty = " Casa normalo en la playa ";
+let descriptionProperty = "Casa pequeña en la costa de la playa de tuxpan con 1 habitacion,1 baño , cocina";
 var statusProperty = "Disponible";
 const typeProperty="C";
 var addressProperty;
