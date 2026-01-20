@@ -1,14 +1,3 @@
-//comentario de una sola linea 
-
-/* comentario
----
-multilinea 
-*/
-
-//ejercicio 01: Declaracion  de variables en javascript
-
-//1. utilizando la palabra reservada var
-//  Comentario de una sola línea 
 
 /*  Comentarios 
     ...
